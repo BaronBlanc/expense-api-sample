@@ -41,12 +41,18 @@ This REST API allows:
 - Displaying all the properties of the expense; the user of the expense should appear in the format `{FirstName} {LastName}` (e.g., "Anthony Stark").
 
 ### Additional information
-- Authentication management is not expected.
+- Authentication management is not implemented.
 
 ### Storage
-Data must is persisted in an SQLite.
+Data is persisted in an SQLite. Were are using an ORM to interact with the database. 
 
 The users' table is initialized with the following users:
 
 - Stark Anthony (with the currency being the U.S. dollar),
 - Romanova Natasha (with the currency being the Russian ruble).
+
+### I chose different design pattern :
+
+ - Specification pattern : to handle specific user criteria in requests
+ - Repository pattern with unit of work to wrap entity framework calls (except in the user Controller)
+ - Command pattern
