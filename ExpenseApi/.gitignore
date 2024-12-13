@@ -1,0 +1,56 @@
+## Ignore Visual Studio files
+.vs/
+.vscode/
+.idea/
+
+## Ignore ASP.NET Core files
+bin/
+obj/
+wwwroot/
+
+## Ignore user-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## Ignore build output
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.mdb
+*.dbmdl
+
+## Ignore the .NET Core SDK files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Ignore test results
+TestResults/
+
+## Ignore IDE and editor files
+# User-specific files
+*.swp
+*.swo
+*.bak
+
+# JetBrains Rider
+.idea/
+
+# User-specific JetBrains Rider files
+.idea/*
+
+# ReSharper
+_ReSharper*/ 
+
+## Ignore npm files for frontend (if applicable)
+node_modules/
+dist/
+*.log
+
+## Ignore package files
+packages/
+*.nupkg

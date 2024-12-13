@@ -1,0 +1,35 @@
+@startuml
+!define RECTANGLE entity
+
+title Expense Management System - Data Model
+
+' Entities
+RECTANGLE User {
+    - id: GUID
+    - lastName: String
+    - firstName: String
+    - currencyId: GUID
+}
+
+RECTANGLE Expense {
+    - id: GUID
+    - userId: GUID
+    - date: DateTime
+    - type: Enum {Restaurant, Hotel, Misc}
+    - amount: Decimal
+    - currencyId: GUID
+    - comment: String
+}
+
+RECTANGLE Currency {
+    - id: GUID
+    - code: String  << e.g., USD, EUR >>
+    - name: String  << e.g., US Dollar, Euro >>
+    - symbol: String  << e.g., $, € >>
+}
+
+' Relationships
+User "0..*" --> "1" Currency : prefers
+Expense "0..*" --> "1" Currency : uses
+User "1" <-- "0..*" Expense : made
+@enduml

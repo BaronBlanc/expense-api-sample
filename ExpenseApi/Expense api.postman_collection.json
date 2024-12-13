@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "0a584a9c-403f-4f79-83c2-5227ae976996",
+		"name": "Expense api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28597981"
+	},
+	"item": [
+		{
+			"name": "List exepenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5200/api/Expenses?userId=C0141CB5-03FE-43C2-9CFA-96B40D77F21B&ascending=true&sortBy=amount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"Expenses"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "C0141CB5-03FE-43C2-9CFA-96B40D77F21B"
+						},
+						{
+							"key": "ascending",
+							"value": "true"
+						},
+						{
+							"key": "sortBy",
+							"value": "amount"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5200/api/Users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Exepense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"C0141CB5-03FE-43C2-9CFA-96B40D77F21B\",\r\n    \"date\": \"2024-11-06T15:34:34.334Z\",\r\n    \"Type\": \"Misc\",\r\n    \"amount\": 10.43,\r\n    \"Currency\": \"$\",\r\n    \"Comment\": \"random expense\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/Expenses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"Expenses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
